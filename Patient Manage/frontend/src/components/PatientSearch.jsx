@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { User, Phone, Search, ArrowRight, ArrowLeft, ShieldCheck, Ticket, Calendar } from 'lucide-react';
 
-const API_BASE_URL = import.meta.env.VITE_API_URL || 'https://deploy-rx89.onrender.com/api/tokens';
+const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:8080/api/tokens';
 
 export default function PatientSearch({ setView, setToken }) {
   const [name, setName] = useState('');
