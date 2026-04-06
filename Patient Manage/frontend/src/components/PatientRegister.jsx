@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { User, Phone, CheckCircle2, Ticket, ArrowRight, ArrowLeft, ShieldCheck, Calendar } from 'lucide-react';
 
-const API_BASE_URL = import.meta.env.VITE_API_URL || ' https://deployfinal-stxd.onrender.com/api/tokens';
+const VITE_URL = import.meta.env.VITE_API_URL || 'http://localhost:8080';
+const API_BASE_URL = `${VITE_URL}/api/tokens`;
 
 export default function PatientRegister({ setView, setToken }) {
   const [name, setName] = useState('');
