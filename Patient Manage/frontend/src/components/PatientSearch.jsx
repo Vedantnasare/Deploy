@@ -2,8 +2,10 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { User, Phone, Search, ArrowRight, ArrowLeft, ShieldCheck, Ticket, Calendar } from 'lucide-react';
 
-const VITE_URL = import.meta.env.VITE_API_URL || 'http://localhost:8080';
+const VITE_URL = (import.meta.env.VITE_API_URL || 'http://localhost:8080').trim();
 const API_BASE_URL = `${VITE_URL}/api/tokens`;
+
+console.log("Current API URL:", API_BASE_URL);
 
 export default function PatientSearch({ setView, setToken }) {
   const [name, setName] = useState('');
