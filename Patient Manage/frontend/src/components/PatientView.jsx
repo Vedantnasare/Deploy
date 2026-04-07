@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Clock, Users, ArrowLeft, RefreshCw, Sparkles, Activity, ShieldCheck, Heart, CheckCircle, Calendar } from 'lucide-react';
 
-let base = (import.meta.env.VITE_API_URL || 'http://localhost:8080').trim();
+let base = (import.meta.env.VITE_API_URL || 'https://deploy-rx89.onrender.com').trim();
 if (base.endsWith('/api/tokens')) base = base.replace('/api/tokens', '');
 const API_BASE_URL = `${base.replace(/\/$/, '')}/api/tokens`;
 
